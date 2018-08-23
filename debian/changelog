@@ -1,3 +1,9 @@
+nfdump (1.6.17-1~bionic0+exo1) bionic; urgency=medium
+
+  * Backport for Bionic.
+
+ -- Vincent Bernat <bernat@debian.org>  Thu, 23 Aug 2018 10:59:21 +0200
+
 nfdump (1.6.17-1) unstable; urgency=medium
 
   * [2216e879] New upstream version 1.6.17
