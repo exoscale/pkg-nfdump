@@ -1,0 +1,342 @@
+nfdump (1.6.17-1) unstable; urgency=medium
+
+  * [2216e879] New upstream version 1.6.17
+    - includes JSON output
+  * [c3e7185a] Add pkg-config build-dep
+  * [b7064305] systemd: Drop Alias with the same name as the unit itself
+    (Closes: #892366)
+
+ -- Bernhard Schmidt <berni@debian.org>  Tue, 24 Apr 2018 00:25:14 +0200
+
+nfdump (1.6.16-3) unstable; urgency=medium
+
+  [ Axel Beckert ]
+  * [82db48d1] Drop redundant Section field from binary stanzas
+  * [9db65c34] Remove trailing whitespace from comments in debian/rules
+  * [f4001ecd] Fix typo found by Lintian in debian/copyright
+  * [f3e25ecf] Set "Rules-Requires-Root: no"
+  * [119b9d98] Convert debian/copyright to machine-readable DEP-5 format.
+    Mention GPL v2 (or later) for bin/*lzo* and update copyright years.
+
+  [ Bernhard Schmidt ]
+  * [8edb62e7] Change Vcs-* to salsa
+  * [73dc34b5] Bump StdVer to 4.1.3, no changes necessary
+
+ -- Bernhard Schmidt <berni@debian.org>  Wed, 03 Jan 2018 00:44:29 +0100
+
+nfdump (1.6.16-2) unstable; urgency=medium
+
+  * [55a75d6c] Disable testsuite again, broken on most architectures
+  * [716843a9] Fix two typos in 1.6.16-1 changelog
+
+ -- Bernhard Schmidt <berni@debian.org>  Mon, 06 Nov 2017 10:07:05 +0100
+
+nfdump (1.6.16-1) unstable; urgency=medium
+
+  [ Axel Beckert ]
+  * [e2308054] debian/{control,copyright}: Update upstream information
+    (Closes: #842363)
+
+  [ Bernhard Schmidt ]
+  * [12aa5943] New upstream version 1.6.16 (Closes: #880918)
+    - this includes support for Cisco 8 bytes timestamps, most notably
+      on NX-OS 8.x
+    - [9cb9b838] Drop patches applied upstream
+    - [0f50f887] Re-enable testsuite, fixed upstream
+  * [4e5ccd73] Use debhelper 10
+  * [b3806c5e] Migrate to automatic -dbgsym package
+  * [13c14d2e] Enable NSEL (Closes: #862120)
+  * [9081edb7] Drop Priority: extra
+
+ -- Bernhard Schmidt <berni@debian.org>  Sun, 05 Nov 2017 19:31:53 +0100
+
+nfdump (1.6.15-3) unstable; urgency=medium
+
+  * [90aed0e8] Fix FTBFS on all arches except amd64
+
+ -- Bernhard Schmidt <berni@debian.org>  Mon, 03 Oct 2016 19:41:12 +0200
+
+nfdump (1.6.15-2) unstable; urgency=medium
+
+  [ Bernhard Schmidt ]
+  * [e53183f3] add minimal gbp.conf
+  * [afadffe4] Switch to debhelper sequencer (compat level 9)
+  * [0e37b935] Set Vcs-* to collab-maint
+  * [2dac084a] Install from debian/tmp, use dh_install --fail-missing
+  * [2495c86d] Enable all hardening (PIE and BINDNOW)
+  * [dab51f7d] Enable nftrack (Closes: #670630)
+
+  [ Erik Wenzel ]
+  * [5b06e993] add patch/10_manpage-macro to fix lintian warning
+
+ -- Bernhard Schmidt <berni@debian.org>  Mon, 03 Oct 2016 14:07:49 +0200
+
+nfdump (1.6.15-1) unstable; urgency=medium
+
+  * [9af4d57a] update Vcs fields
+  * [1d1c0ff6] bump standards-version to 3.9.8
+  * [72cdd78a] add Bernhard Schmidt to uploader field
+
+ -- Erik Wenzel <erik@debian.org>  Sat, 24 Sep 2016 17:59:53 +0200
+
+nfdump (1.6.15-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream version 1.6.15 (Closes: #819217)
+    - add libbz2-dev build-dep
+    - disable building of shared library to minimise packaging changes
+  * Update debian/watch to point to Github repo
+
+ -- Bernhard Schmidt <berni@debian.org>  Fri, 09 Sep 2016 19:53:00 +0200
+
+nfdump (1.6.12-0.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add build-dependency to libz-dev (Closes: #799994)
+  * Build-depend on dh-systemd to include systemd support lost in 1.6.12-0.1
+  * Bump compat level to 6, fixing postrm ordering issues with systemd
+    (Closes: #767827)
+
+ -- Bernhard Schmidt <berni@debian.org>  Mon, 09 Nov 2015 22:11:08 +0100
+
+nfdump (1.6.12-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add missing build dependency on autoconf in debian/control
+    to fix FTBFS on all architectures (Closes: #766493).
+
+ -- John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>  Wed, 17 Dec 2014 00:36:41 +0100
+
+nfdump (1.6.12-0) unstable; urgency=medium
+
+  * Non maintainer upload
+  * New upstream release with many critical fixes (Closes: #754782, #736531)
+  * Add services/unit file
+
+ -- Jaakko Niemi <liiwi@debian.org>  Tue, 21 Oct 2014 18:16:49 +0300
+
+nfdump (1.6.8p1-1) unstable; urgency=low
+
+  * [c45b1b67] [control] fixed typo in description of nfdump-sfcap
+  Thanks: Timo Juhani Lindfors <timo.lindfors@iki.fi>
+  * [67adcbfc] [control] added ipfix to description
+  * [83c52dbd] [watch] include "p1" release in upstream search regex
+  * [01818c50] Imported Upstream version 1.6.8p1
+
+ -- Erik Wenzel <erik@debian.org>  Fri, 15 Feb 2013 16:32:12 +0100
+
+nfdump (1.6.6-1) unstable; urgency=low
+
+  * [372bdb93] Imported Upstream version 1.6.6
+  * [524520d9] [control] bumped standards version nothing changed
+
+ -- Erik Wenzel <erik@debian.org>  Tue, 13 Mar 2012 22:48:50 +0100
+
+nfdump (1.6.5-1) unstable; urgency=low
+
+  * [7ad3f1b3] Imported Upstream version 1.6.5
+
+ -- Erik Wenzel <erik@debian.org>  Thu, 02 Feb 2012 23:20:53 +0100
+
+nfdump (1.6.4-1) unstable; urgency=low
+
+  * [43f0a2ce] Imported Upstream version 1.6.4
+  * [210848d3] removed man_nfanon.patch. fixed in upstream.
+  * [c3481ca7] [control] bumped standards version. nothing changed
+  * [7be59972] nfdump-flow-tools package for optional import
+  Closes: #642233
+  * [e32621cf] nfdump-sflow package on user request
+  Thanks: Vincent Bruijnes <vincent@bruijn.es>
+  * [2430c536] added nfdump.{install,manpages} to keep out files that are
+  in optional packages
+
+ -- Erik Wenzel <erik@debian.org>  Fri, 14 Oct 2011 23:59:34 +0200
+
+nfdump (1.6.3p1-1) unstable; urgency=low
+
+  * [ce336481] Imported Upstream version 1.6.3p1
+
+ -- Erik Wenzel <erik@debian.org>  Mon, 21 Mar 2011 11:41:03 +0100
+
+nfdump (1.6.3-1) unstable; urgency=low
+
+  * [ffa738b6] Imported Upstream version 1.6.3
+  * [3f91561c] [debian/watch] changed url to see all upstream tars.
+  * [47dfd252] [man_nfanon] added man page for nfanon
+
+ -- Erik Wenzel <erik@debian.org>  Mon, 21 Mar 2011 11:16:14 +0100
+
+nfdump (1.6.2-1) unstable; urgency=low
+
+  * [23edbd27] Imported Upstream version 1.6.2
+  * [05752327] changed to quilt patch system
+  * [5bd30afe] [debian/copyright] included upstreams bsd license and
+    removed link to standard bsd license as lintian suggests
+
+ -- Erik Wenzel <erik@debian.org>  Fri, 01 Oct 2010 16:49:36 +0200
+
+nfdump (1.6.1-1) unstable; urgency=low
+
+  * [d3a4ca64] Imported Upstream version 1.6.1
+  * [f71782c6] [init.d] add remote_fs
+  * [15199559] [control] bumped standards version. nothing changed
+
+ -- Erik Wenzel <erik@debian.org>  Sun, 14 Mar 2010 01:17:52 +0100
+
+nfdump (1.6-1) unstable; urgency=low
+
+  * [85b1631d] Import from tar version 1.6 because of upstream merge
+    conflicts
+  * [804a4fab] [rules] added compatibility mode for 1.5
+  * [491342e6] [rules] added non-default nfprofile option
+
+ -- Erik Wenzel <erik@debian.org>  Sat, 16 Jan 2010 01:19:34 +0100
+
+nfdump (1.5.8-2) unstable; urgency=low
+
+  * [c2ee06bf] [init.d] changed exit code handling (Closes: 534559)
+  * [15396d53] [control] changed section for dbg package to debug
+  * [5c087d4d] [control] bumped standards version
+
+ -- Erik Wenzel <erik@debian.org>  Mon, 26 Oct 2009 00:03:16 +0100
+
+nfdump (1.5.8-1) unstable; urgency=low
+
+  * [cd191141] [control] added build-depends to librrd-dev
+  * [6a54fb1c] [init.d] fixed exit code handling in restart case
+  * [fc53c30b] [watch] tighten rule to exclude snapshot releases
+  * [4e5cfe3e] Imported Upstream version 1.5.8
+  * [77382372] [control] bumped standard versions (nothing changed)
+
+ -- Erik Wenzel <erik@debian.org>  Mon, 27 Jul 2009 23:17:16 +0200
+
+nfdump (1.5.7+20081221-3) unstable; urgency=low
+
+  * [7f7122f1] [init.d] fixed typo which led to a unusable script
+
+ -- Erik Wenzel <erik@debian.org>  Mon, 02 Feb 2009 21:36:52 +0100
+
+nfdump (1.5.7+20081221-2) unstable; urgency=low
+
+  * [a2d2c942] added pidfile option to daemon args (Closes: 484526) -
+    thanks to Jorik Jonker <jorik@kippendief.biz> Remco Post
+    <remco@pipsworld.nl>
+  * [68397ec4] added nfcapd control mode and is enabled by default
+
+ -- Erik Wenzel <erik@debian.org>  Mon, 02 Feb 2009 14:49:15 +0100
+
+nfdump (1.5.7+20081221-1) unstable; urgency=low
+
+  * [3776e2b4] disabled nostrip build option
+  * [ef42d53e] Imported Upstream version snapshot-1.5.7-20081221
+  * [153e86f2] [patch] removed 0005_division-zero-generic2
+  * [bd492712] renamed debian.source to README.source
+  * [e1b7ad5c] [control] added misc depends
+  * [016d4774] updated README.source
+  * [e25b8eb2] [changelog] removed latest revision entry
+
+ -- Erik Wenzel <erik@debian.org>  Tue, 27 Jan 2009 04:29:01 +0100
+
+nfdump (1.5.7-5) unstable; urgency=low
+
+  * start daemon with DATA_BASE_DIR set to /var/cache/nfdump Closes: #497452
+  * git-active-patches: added 0005_division-zero-generic2
+  * git-active-patches: removed 0005_division-zero-generic
+  * git-active-patches: removed -05_division-by-zero
+
+ -- Erik Wenzel <erik@debian.org>  Mon, 08 Sep 2008 00:55:36 +0000
+
+nfdump (1.5.7-4) unstable; urgency=low
+
+  * added feature "refresh patches" which creates patches from git
+    feature branches actived in debian/git-active-patches
+  * README.Debian: documented installed patches in packet
+  * debian.source: added. As documentation on building the packages
+
+ -- Erik Wenzel <erik@debian.org>  Fri, 18 Jul 2008 12:24:53 +0000
+
+nfdump (1.5.7-3) unstable; urgency=low
+
+  * bumped Standards-Version
+  * debian/{init.d,README.Debian} accidenly removed from
+    package (Closes: #484519)
+
+ -- Erik Wenzel <erik@debian.org>  Sat, 28 Jun 2008 22:12:29 +0000
+
+nfdump (1.5.7-2) unstable; urgency=low
+
+  * added compat
+  * added DebTags
+  * added watch file
+  * fixed build-dependencies
+
+ -- Erik Wenzel <erik@debian.org>  Thu, 27 Mar 2008 21:52:06 +0000
+
+nfdump (1.5.7-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Erik Wenzel <erik@debian.org>  Tue, 18 Mar 2008 12:45:17 +0000
+
+nfdump (1.5.6-1) unstable; urgency=low
+
+  * Updated to new upstream version
+  * [control] removed dep to dpatch
+  * [rules] added nfprofile
+  * [control] added dependency for librrd2-dev
+  * [control] Standards-Version bumped to 3.7.3 (nothing changed)
+
+ -- Erik Wenzel <erik@debian.org>  Thu, 17 Jan 2008 06:26:37 +0000
+
+nfdump (1.5.5-1) unstable; urgency=low
+
+  * New Upstream Version
+  * removed unused patches
+  * removed debian/examples
+  * this version was not released
+
+ -- Erik Wenzel <erik@debian.org>  Fri, 21 Dec 2007 11:15:05 +0000
+
+nfdump (1.5.2-6) unstable; urgency=low
+
+  * included ISC Licence text in debian/copyright
+
+ -- Erik Wenzel <erik@debian.org>  Fri, 12 Jan 2007 09:16:27 +0000
+
+nfdump (1.5.2-5) unstable; urgency=low
+
+  * removed dpatch version from debian/control
+
+ -- Erik Wenzel <erik@debian.org>  Tue,  9 Jan 2007 21:39:12 +0000
+
+nfdump (1.5.2-4) unstable; urgency=low
+
+  * updated debian/copyright
+
+ -- Erik Wenzel <erik@debian.org>  Sat, 30 Dec 2006 19:47:29 +0000
+
+nfdump (1.5.2-3) unstable; urgency=low
+
+  * Added my self to maintainer in debian/control [Erik Wenzel]
+
+ -- Erik Wenzel <erik@debian.org>  Sat,  2 Dec 2006 16:46:53 +0100
+
+nfdump (1.5.2-2) unstable; urgency=low
+
+  * added init script using lsb-base functions
+  * updated description in control file
+  * using dpatch
+  * [10_remove_nfclean_from_usr-bin]: install nfclean.pl into doc/examples
+    using. Added a note in README.Debian
+  * enabled compat14 mode in debian/rules
+  * [20_flow_tools_dev_path] changes path lib and include directories. This is
+    only needed when you use DEB_CONFIGURE_EXTRA_FLAGS += --enable-ftconv and
+    is currently disabled.
+
+ -- Erik Wenzel <erik@debian.org>  Sat,  2 Dec 2006 16:20:29 +0100
+
+nfdump (1.5.2-1) unstable; urgency=low
+
+  * Initial release. (Closes: #322870)
+
+ -- Erik Wenzel <erik@debian.org>  Fri, 27 Oct 2006 14:32:11 +0200

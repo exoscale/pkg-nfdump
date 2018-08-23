@@ -1,0 +1,10 @@
+Script nfclean.pl is installed in examples/ directory and can be used to clean
+up files nfcapd created. For a detailed description read nfclean.pl.
+
+Option nfcapd_start is disabled in /etc/default/nfdump by default. This
+prevents nfdump to start a nfcapd daemon on installation. This is default,
+because most people install nfdump as a dependency from nfsen. And nfsen is
+controlling nfcapd on its own.
+
+The package currently contains patches that are not in upstream release:
+05_division-by-zero.patch
